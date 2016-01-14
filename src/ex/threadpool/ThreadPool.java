@@ -21,6 +21,9 @@ public class ThreadPool {
 	 *   
 	 * Q5. addShutdownHook을 여러개 등록 시킬 경우 작동 여부는?
 	 *   - 언제 어디서든 등록만 하기만 하면 작동이 된다.
+	 *   
+	 * Q6. 규칙적으로 도는 Thread를 작동 시키고 addShutdownHook을 이용하여 thread를 종료시킬수 있나??
+	 *   -  Ctrl+C 로 프로그램 종료시 addShutdownHook 동작. exit(0) 호출해도 동작함.
 	 */
 	
 	public static void main(String[] args) {
@@ -42,9 +45,18 @@ public class ThreadPool {
 		//Q3 END
 				
 		//Q5 START
-		asdh.addShutdownHookQ1();
-		asdh.addShutdownHookQ3();
+//		asdh.addShutdownHookQ1();
+//		asdh.addShutdownHookQ3();
 		//Q5 END
 		
+		//Q6 START
+//		
+//		RunThread runThread = new RunThread();
+//		runThread.start();
+//		asdh.addShutdownHookQ6(runThread);
+		//Q6 END
+		
 	}
+	
+	
 }

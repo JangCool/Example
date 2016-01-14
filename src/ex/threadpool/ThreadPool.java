@@ -18,7 +18,9 @@ public class ThreadPool {
 	 * 
 	 * Q4.main 메소드의 실행이 시작 된 뒤 shell 의 kill 명령어로 강제 종료 하는 경우.
 	 *   - kill 명령어로 죽이면 addShutdownHook이 먹지 않고 jvm이 강제로 종료됨
-	 * 
+	 *   
+	 * Q5. addShutdownHook을 여러개 등록 시킬 경우 작동 여부는?
+	 *   - 언제 어디서든 등록만 하기만 하면 작동이 된다.
 	 */
 	
 	public static void main(String[] args) {
@@ -32,12 +34,17 @@ public class ThreadPool {
 		//Q1 END
 				
 		//Q2 or Q4 START
-		asdh.addShutdownHookQ2();
+		//asdh.addShutdownHookQ2();
 		//Q2 or Q4 END
 		
 		//Q3 START
 		//asdh.addShutdownHookQ3();
 		//Q3 END
+				
+		//Q5 START
+		asdh.addShutdownHookQ1();
+		asdh.addShutdownHookQ3();
+		//Q5 END
 		
 	}
 }

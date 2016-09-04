@@ -70,7 +70,7 @@ public class Tps {
 			//현재 포지션이 0일 경우 배열 최대값인 299값으로 설정한다. size크기는 300개(초)지만 배열은 0부터 시작하기에 -1을 차감하여 299에서 시작한다.
 			//0 이후에서 currPosition -- 계산을 하면 음수로 계산되기 때문에 그전에 변경해 주어야한다.
 			if(currPosition == 0){
-				currPosition = DEFAULT_PERF_SIZE-1;
+				currPosition = (DEFAULT_PERF_SIZE-1); //299
 			}
 			
 		}
